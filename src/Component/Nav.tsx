@@ -21,7 +21,7 @@ const Nav = () => {
                 </ul>
                 <div className='flex gap-4 '>
                     <button className='cursor-pointer' >Sign In</button>
-                    <button className='bg-[#D91B7E] cursor-pointer py-2 px-5 rounded-4xl text-white' >Sign Up</button>
+                    <button className=' bg-gradient-to-r from-[#F97316] to-[#EC4899] py-2  px-4 rounded-4xl cursor-pointer text-white' >Sign Up</button>
 
 
 

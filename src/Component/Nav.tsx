@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 const Nav = () => {
     return (
         <>
-            <nav className='flex justify-between container mx-auto mt-8  items-center '>
+            <nav className='flex justify-between stack-start container mx-auto mt-8  items-center '>
 
                 <GiHamburgerMenu className='md:hidden flex justify-end text-4xl text-[#475569]' />
 

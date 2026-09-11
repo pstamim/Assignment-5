@@ -1,14 +1,18 @@
 import { FaStar } from "react-icons/fa";
 import type { IExplorCompany } from "./Interface";
-import { useState } from "react";
+
+
 
 interface Imaindataprops {
-    maindata: IExplorCompany[]
+    maindata: IExplorCompany
+    handleaddstack: (maindata: IExplorCompany) => void
 }
 
-const Maincart = ({ maindata }: Imaindataprops[]) => {
+const Maincart = ({ maindata, handleaddstack, }: Imaindataprops) => {
 
-    // const [addStack, setaddStack] = useState(false)
+
+
+
 
 
     return (
@@ -36,7 +40,7 @@ const Maincart = ({ maindata }: Imaindataprops[]) => {
                 </div>
 
 
-                <button
+                <button onClick={() => handleaddstack(maindata)}
                     className="btn btn-neutral px-30 mt-4">Add to Stack</button>
             </div>
         </div >

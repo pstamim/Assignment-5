@@ -14,6 +14,8 @@ const explorcompnydata = async (): Promise<IExplorCompany[]> => {
 
 function App() {
 
+ 
+
 
   return (
     <>
@@ -22,7 +24,7 @@ function App() {
       <Suspense fallback={<h1 className='container mx-auto text-3xl'>Loading...</h1>}>
         <ExploretheTechnologies explorcompnydata={explorcompnydata()} />
       </Suspense>
-      <Footer/>
+      <Footer />
     </>
   )
 }

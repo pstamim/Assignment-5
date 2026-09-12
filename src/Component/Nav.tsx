@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 const Nav = () => {
     return (
         <>
-            <nav className='flex justify-between stack-start container mx-auto mt-8  items-center'>
+            <nav className='flex justify-between sticky top-0 z-50 bg-white container mx-auto p-5 items-center border-b border-gray-200'>
 
                 <GiHamburgerMenu className='md:hidden flex justify-end text-4xl text-[#475569]' />
 
@@ -26,9 +26,10 @@ const Nav = () => {
 
 
                 </div>
+                 
 
             </nav>
-            <div className="divider" />
+          
 
         </>
     );

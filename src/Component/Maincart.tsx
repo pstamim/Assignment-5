@@ -1,5 +1,6 @@
 import { FaStar } from "react-icons/fa";
 import type { IExplorCompany } from "./Interface";
+import { ToastContainer } from "react-toastify";
 
 
 
@@ -38,10 +39,13 @@ const Maincart = ({ maindata, handleaddstack, }: Imaindataprops) => {
 
 
                 </div>
+                <div className="flex">
 
+                    <button onClick={() => handleaddstack(maindata)}
+                        className="btn btn-neutral px-30 mt-4">Add to Stack</button>
+                </div>
 
-                <button onClick={() => handleaddstack(maindata)}
-                    className="btn btn-neutral px-30 mt-4">Add to Stack</button>
+                <ToastContainer />
             </div>
         </div >
     );

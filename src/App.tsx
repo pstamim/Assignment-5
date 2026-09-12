@@ -6,6 +6,7 @@ import type { IExplorCompany } from './Component/Interface'
 import Nav from './Component/Nav'
 import Footer from './Component/Footer'
 
+
 const explorcompnydata = async (): Promise<IExplorCompany[]> => {
   const res = await fetch('/DevStack-data.json')
   const data = await res.json()
@@ -24,6 +25,7 @@ function App() {
       <Suspense fallback={<h1 className='container mx-auto text-3xl'>Loading...</h1>}>
         <ExploretheTechnologies explorcompnydata={explorcompnydata()} />
       </Suspense>
+   
       <Footer />
     </>
   )

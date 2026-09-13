@@ -31,10 +31,12 @@ const Cart = ({ compnydata }: Icompanymap) => {
 
     const handleremovestack = (id: number) => {
         setaddStack(addStack.filter(items => items.id !== id))
+        toast.error('Remove Cart')
 
     }
     const handleRemoveall = () => {
         setaddStack([])
+        toast.warn('All Cart Remove')
     }
     return (
         <div className='container mx-auto mt-20 px-4'>

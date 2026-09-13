@@ -49,9 +49,7 @@ const Maincart = ({ maindata, handleaddstack, addStack }: Imaindataprops) => {
                 >
                     {addedbutton ? "✓ Added to Stack " : "Add to Stack"}
                 </button>
-                <ToastContainer
-
-                />
+               
 
             </div>
         </div >

@@ -39,12 +39,16 @@ const Cart = ({ compnydata }: Icompanymap) => {
     return (
         <div className='container mx-auto mt-20 px-4'>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
-                <div className='md:col-span-3 grid grid-cols-1 sm: grid-cols-2 md: grid-cols-3 gap-4'>
-                    {
-                        compnydata.map((maindata: IExplorCompany) => {
-                            return <Maincart key={maindata.id} maindata={maindata} handleaddstack={handleaddstack} addStack={addStack} />
-                        })
-                    }
+                <div className=' md:col-span-3'>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+
+
+                        {
+                            compnydata.map((maindata: IExplorCompany) => {
+                                return <Maincart key={maindata.id} maindata={maindata} handleaddstack={handleaddstack} addStack={addStack} />
+                            })
+                        }
+                    </div>
                 </div>
                 <div className='md:col-span-1'>
                     <div className='border border-slate-200 rounded-2xl p-5 h-fit'>
@@ -52,6 +56,7 @@ const Cart = ({ compnydata }: Icompanymap) => {
                         <p className='text-sm text-slate-400 mt-1'>
                             {addStack.length === 0 ? 'No technologies selected yet.' : `${addStack.length} Technology Selected`}
                         </p>
+
                         <div className='flex justify-center'>
                             {
                                 addStack.length === 0 ? (
@@ -61,6 +66,7 @@ const Cart = ({ compnydata }: Icompanymap) => {
                                 )
                             }
                         </div>
+
 
 
 
@@ -94,8 +100,6 @@ const Cart = ({ compnydata }: Icompanymap) => {
                             }
 
                         </div>
-
-
                     </div>
                 </div>
             </div>

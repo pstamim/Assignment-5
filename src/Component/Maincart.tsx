@@ -41,15 +41,20 @@ const Maincart = ({ maindata, handleaddstack, addStack }: Imaindataprops) => {
 
 
                 </div>
+<button
+  onClick={() => handleaddstack(maindata)}
+  disabled={addedbutton}
+  className={`w-full mt-4 py-2 px-3 rounded-xl font-bold whitespace-nowrap transition
+    ${
+      addedbutton
+        ? "bg-pink-100 text-pink-500 cursor-not-allowed"
+        : "bg-black text-white cursor-pointer hover:bg-slate-800"
+    }
+  `}
+>
+  {addedbutton ? "✓ Added to Stack" : "Add to Stack"}
+</button>
 
-                <button
-                    onClick={() => handleaddstack(maindata)}
-                    disabled={addedbutton}
-                    className={`${addedbutton ? " bg-pink-100 py-2 px-25 mt-4 pr-20 text-pink-500 font-bold rounded-xl whitespace-nowrap disabled:cursor-not-allowed " : " bg-black px-30 py-2 pr-25 whitespace-nowrap mt-4 rounded-xl cursor-pointer text-white"}`}
-                >
-                    {addedbutton ? "✓ Added to Stack " : "Add to Stack"}
-                </button>
-               
 
             </div>
         </div >
